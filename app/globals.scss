@@ -8,6 +8,11 @@
   --color-yellow: #F4CE14;
   --color-green: #379777;
   --color-red: #A91D3A;
+  --color-neon-pink: #F72798;
+  --color-neon-red: #FF004D;
+  --color-neon-blue: #0079FF;
+  --color-neon-green: #16FF00;
+  --color-neon-yellow: #FFDB00;
   // Sizing
   // TODO: better naming here pls
   --spacing-small: 20px;
@@ -19,12 +24,12 @@
   margin: 0;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-  /* min-height: 100vh; */
-}
+// html,
+// body {
+//   // max-width: 100vw;
+//   // overflow: hidden;
+//   // max-height: 100vh;
+// }
 
 body {
   background-color: var(--color-bg);
