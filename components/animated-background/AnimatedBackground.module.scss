@@ -29,7 +29,7 @@
     border-radius: 50%;
 }
 .bottom-first {
-    animation: rotation 60s linear infinite;
+    animation: rotation-reverse 60s linear infinite;
 }
 .bottom-second {
     animation: rotation 35s linear infinite;
@@ -49,7 +49,7 @@
     animation: rotation 62s linear infinite;
 }
 .top-second {
-    animation: rotation 39s linear infinite;
+    animation: rotation-reverse 39s linear infinite;
 }
 .top {
     overflow: hidden;
@@ -78,5 +78,14 @@
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes rotation-reverse {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
     }
 }
