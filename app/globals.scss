@@ -1,6 +1,7 @@
 :root {
   // Color
-  --color-bg: #F0F3FF;
+  // --color-bg: #F0F3FF;
+  --color-bg: #4D4C7D;
   --color-navy: #211951;
   --color-purple: #836FFF;
   --color-mint: #15F5BA;
@@ -9,7 +10,7 @@
   --color-red: #A91D3A;
   // Sizing
   // TODO: better naming here pls
-  --size-1: 30px;
+  --spacing-small: 20px;
 }
 
 * {
