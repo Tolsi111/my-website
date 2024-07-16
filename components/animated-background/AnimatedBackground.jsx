@@ -10,6 +10,7 @@ export default function AnimatedBackground() {
             <div className={`${styles.top} ${styles['top-first']}`}/>
             <div className={`${styles.top} ${styles['top-second']}`}/>
             <div className={styles['top-inner']}></div>
+            <div className={styles['glass-blur']}></div>
         </div>
     )
 }
