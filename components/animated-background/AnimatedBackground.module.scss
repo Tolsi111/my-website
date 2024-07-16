@@ -10,6 +10,7 @@
     width: 100vw;
     background-color: transparent;
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     background-image: linear-gradient(
         120deg,
         rgba(33, 25, 81,0.5),
@@ -28,10 +29,10 @@
     border-radius: 50%;
 }
 .bottom-first {
-    animation: rotation 62s linear infinite;
+    animation: rotation 60s linear infinite;
 }
 .bottom-second {
-    animation: rotation 42s linear infinite;
+    animation: rotation 35s linear infinite;
 }
 .bottom-inner {
     position: absolute;
@@ -48,7 +49,7 @@
     animation: rotation 62s linear infinite;
 }
 .top-second {
-    animation: rotation 42s linear infinite;
+    animation: rotation 39s linear infinite;
 }
 .top {
     overflow: hidden;
