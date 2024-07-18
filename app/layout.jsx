@@ -13,8 +13,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <AnimatedBackground/>
-      <body className={`${inter.className} ${styles.main}`}>{children}</body>
+      <body className={`${inter.className} ${styles.main}`}>
+        <AnimatedBackground/>
+        {children}
+      </body>
     </html>
   );
 }
