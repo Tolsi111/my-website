@@ -1,18 +1,13 @@
 :root {
   // Color
+  
+  // Animated background
   --color-bg: #F0F3FF;
-  // --color-bg: #4d4c7d00;
-  --color-navy: #211951;
-  --color-purple: #836FFF;
-  --color-mint: #15F5BA;
-  --color-yellow: #F4CE14;
-  --color-green: #379777;
-  --color-red: #A91D3A;
-  --color-neon-pink: #F72798;
-  --color-neon-red: #FF004D;
-  --color-neon-blue: #0079FF;
-  --color-neon-green: #16FF00;
-  --color-neon-yellow: #FFDB00;
+  --color-outer-circle: #836FFF;
+  --color-inner-circle: #15F5BA;
+  // Main cards
+  --color-mint: #45FFCA;
+  --color-main: #211951;
   // Sizing
   --spacing-small: 20px;
 }

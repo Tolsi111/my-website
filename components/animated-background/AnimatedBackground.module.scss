@@ -9,12 +9,12 @@
     height: 100vh;
     width: 100vw;
     background-color: transparent;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(5px);
     background-image: linear-gradient(
         120deg,
-        rgba(33, 25, 81,0.5),
-        rgba(33, 25, 81,0.1)
+        rgba(33, 25, 81,0.8),
+        rgba(33, 25, 81,0.5)
     );
 }
 // Bottom-left animation
@@ -25,7 +25,7 @@
     width: 100vw;
     bottom: -50vh;
     left: -50vw;
-    background-color: var(--color-neon-pink);
+    background-color: var(--color-outer-circle);
     border-radius: 50%;
 }
 .bottom-first {
@@ -40,9 +40,9 @@
     width: 50vw;
     bottom: -24vh;
     left: -25vw;
-    background-color: var(--color-neon-green);
+    background-color: var(--color-inner-circle);
     border-radius: 50%;
-    animation: rotation 71s linear infinite;
+    animation: rotation 71s linear infinite;    
 }
 // Top-right animation
 .top-first {
@@ -58,7 +58,7 @@
     width: 100vw;
     top: -50vh;
     right: -50vw;
-    background-color: var(--color-neon-red);
+    background-color: var(--color-outer-circle);
     border-radius: 50%;
 }
 .top-inner {
@@ -67,7 +67,7 @@
     width: 50vw;
     top: -25vh;
     right: -25vw;
-    background-color: var(--color-neon-yellow);
+    background-color: var(--color-inner-circle);
     border-radius: 50%;
     animation: rotation 73s linear infinite;
 }
