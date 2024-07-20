@@ -13,47 +13,50 @@
   grid-template-rows: repeat(9,60px);
   grid-template-columns: repeat(9,80px);
   grid-gap: var(--spacing-small);
+  // overflow: hidden;
+}
 
+.main-container > * {
+  background-color: var(--color-main);
+  background-image: url("../assets/rocky-wall.png");
+  border-radius: 7px;
+  color: var(--color-bg);
+  box-shadow: 7px 7px 7px rgba(255, 255, 255, 0.13) inset,
+  -12px -12px 12px rgba(0, 0, 0, 0.3) inset;
 }
 
 .title {
-  background-color: aliceblue;
   grid-row: 1 / 3;
   grid-column: 1 / 6;
+  flex-direction: column;
 }
 
 .experience {
-  background-color: red;
   grid-row: 1 / 3;
   grid-column: 6 / 8;
 }
 
 .contacts {
-  background-color: rgb(68, 103, 133);
   grid-row: 3 / 10;
   grid-column: 1 / 3;
 }
 
 .me {
-  background-color: rgb(18, 53, 83);
   grid-row: 3 / 8;
   grid-column: 3 / 8;
 }
 
 .projects {
-  background-color: rgb(61, 72, 82);
   grid-row: 1 / 8;
   grid-column: 8 / 10;
 }
 
 .hobbies {
-  background-color: green;
   grid-row: 8 / 10;
   grid-column: 3 / 8;
 }
 
 .education {
-  background-color: yellowgreen;
   grid-row: 8 / 10;
   grid-column: 8 / 10;
 }

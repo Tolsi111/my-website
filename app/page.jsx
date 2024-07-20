@@ -4,7 +4,9 @@ export default function Home() {
   return (
   <main className={styles['main-container']}>
     <article className={`${styles.title} ${styles.flex}`}>
-title
+      <h1>Full-stack Web Developer</h1>
+      <h2>With a Front-end focus</h2>
+      <h3>Also, React is my favourite</h3>
     </article>
     <article className={`${styles.experience} ${styles.flex}`}>
       {/* nav link */}experience
