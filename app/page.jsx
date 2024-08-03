@@ -1,4 +1,6 @@
+import Image from "next/image";
 import styles from "./page.module.scss";
+import myself from "@/assets/me.webp"
 
 export default function Home() {
   return (
@@ -12,10 +14,10 @@ export default function Home() {
       {/* nav link */}experience
     </article>
     <article className={`${styles.contacts} ${styles.flex}`}>
-contacts
+      <h1>Romulus-Andrei Bacila</h1>
     </article>
     <article className={`${styles.me} ${styles.flex}`}>
-me
+      <Image src={myself} alt="Picture of me" width={480} height={380} className={styles.picture}/>
     </article>
     <article className={`${styles.projects} ${styles.flex}`}>
       {/* nav link */}projects
