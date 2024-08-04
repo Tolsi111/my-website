@@ -78,10 +78,20 @@
 
 .hobbies {
   grid-row: 8 / 10;
-  grid-column: 3 / 8;
+  grid-column: 3 / 5;
+}
+
+.hobbies {
+  grid-row: 8 / 10;
+  grid-column: 3 / 6;
 }
 
 .education {
+  grid-row: 8 / 10;
+  grid-column: 6 / 8;
+}
+
+.theme {
   grid-row: 8 / 10;
   grid-column: 8 / 10;
 }

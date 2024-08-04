@@ -28,6 +28,9 @@ export default function Home() {
     <article className={`${styles.education} ${styles.flex}`}>
       {/* button */}education
     </article>
+    <article className={`${styles.theme} ${styles.flex}`}>
+      {/* button */}theme
+    </article>
   </main>
   );
 }
