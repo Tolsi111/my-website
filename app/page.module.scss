@@ -16,31 +16,37 @@
 }
 
 .main-container > *:not(.me) {
+  position: relative;
   border-radius: var(--border-radius-regular);
   color: var(--color-bg);
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
-
-  background-color: transparent;
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
-  background-image: linear-gradient(
-        120deg,
-        rgba(26, 18, 70, 0.9),
-        rgba(33, 25, 81, 0.6)
-    );
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4), 5px 5px 5px var(--color-light-navy) inset;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: transform .3s;
 
   &:hover {
-    transform: translate(-1px,-3px);
+    transform: translate(1px,2px);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4) inset, 3px 3px 3px var(--color-light-navy);
   }
 }
+// .main-container > *:not(.me):hover::after {
+//     content: '';
+//     position: absolute;
+//     height: 100%;
+//     width: 100%;
+//     // background-color: var(--color-navy-dark);
+//     top: -2px;
+//     left: -2px;
+//     z-index: -1;
+//     padding: 4px;
+//     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4), 3px 3px 3px var(--color-light-navy) inset;
+// }
 
 .main-container > *:not(.me):after {
   border-radius: var(--border-radius-regular);
   content: "";
   width: 100%;
   height: 100%;
-  background-image: url("../assets/bright-squares.png");
-  // background-image: url("../assets/subtle-white-feathers.png");
   position: absolute;
 }
 

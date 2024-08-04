@@ -23,7 +23,7 @@ export default function Home() {
       {/* nav link */}projects
     </article>
     <article className={`${styles.hobbies} ${styles.flex}`}>
-      {/* nav link */}hobbies
+      {/* split this in two? one for hobbies and one for dark mode switch */}hobbies
     </article>
     <article className={`${styles.education} ${styles.flex}`}>
       {/* button */}education

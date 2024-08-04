@@ -1,8 +1,18 @@
 :root {
   // Color
-  
+  // dark mode color scheme:
+  --color-navy-dark: #18122b;// used for bg
+  --color-navy-light: #393053;
+  --color-purple-dark: #443C68;
+  --color-purple-light: #443C68;
+  // light mode? color scheme:
+  --color-light-navy: #180161;// used for bg
+  --color-light-purple: #4F1787;
+  --color-light-pink: #EB3678;
+  --color-light-orange: #FB773C;
+
   // Animated background
-  --color-bg: #F0F3FF;
+  --color-bg: #F0F3FF;// used for text
   --color-outer-circle: #836FFF;
   --color-inner-circle: #15F5BA;
   // Main cards
@@ -11,6 +21,8 @@
   // Sizing
   --spacing-small: 20px;
   --border-radius-regular: 7px;
+  // Z-index
+  --z-index-background: -10;
 }
 
 * {
