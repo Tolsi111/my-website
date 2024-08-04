@@ -18,28 +18,26 @@
 .main-container > *:not(.me) {
   position: relative;
   border-radius: var(--border-radius-regular);
-  color: var(--color-bg);
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4), 5px 5px 5px var(--color-light-navy) inset;
+  color: var(--color-text);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4), 3px 3px 3px var(--color-bg-main) inset;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  transition: transform .3s;
+  transition: transform .3s, box-shadow 2s;
 
   &:hover {
-    transform: translate(1px,2px);
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4) inset, 3px 3px 3px var(--color-light-navy);
+    // transform: translate(1px,2px);
+    // box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4) inset, 3px 3px 3px var(--color-light-navy);
+    // background-color: var(--color-navy-dark);
   }
 }
-// .main-container > *:not(.me):hover::after {
+// .main-container > *:not(.me):hover::after { use these to animate the background
 //     content: '';
 //     position: absolute;
 //     height: 100%;
 //     width: 100%;
-//     // background-color: var(--color-navy-dark);
-//     top: -2px;
-//     left: -2px;
+//     background-color: var(--color-navy-dark);
 //     z-index: -1;
-//     padding: 4px;
-//     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4), 3px 3px 3px var(--color-light-navy) inset;
+//     box-shadow: 3px 3px 3px var(--color-light-navy) inset;
 // }
 
 .main-container > *:not(.me):after {
