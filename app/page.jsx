@@ -1,8 +1,15 @@
 import Image from "next/image";
 import styles from "./page.module.scss";
-import myself from "@/assets/me.webp"
+import myself from "@/assets/me.webp";
+import email from "@/assets/email.svg";
+import github from "@/assets/github.svg";
+import linkedin from "@/assets/linkedin.svg";
+import phone from "@/assets/phone.svg";
+import AnimatedSlider from "@/components/animated-slider/AnimatedSlider";
 
 export default function Home() {
+  const contactSliderImages = [email, github, linkedin, phone ]
+
   return (
   <main className={styles['main-container']}>
     <article className={`${styles.title} ${styles.flex}`}>
@@ -15,13 +22,13 @@ export default function Home() {
     </article>
     <article className={`${styles.contacts} ${styles.flex}`}>
       <h1>Romulus-Andrei Bacila</h1>
-      <ul>
+      {/* <ul>
         <li >Linkedin</li>
         <li >Github</li>
         <li >My cv</li>
         <li >Email</li>
-      </ul>
-      <svg></svg>
+      </ul> */}
+      <AnimatedSlider vectorGraphics={contactSliderImages}/>
     </article>
     <article className={`${styles.me} ${styles.flex}`}>
       <Image src={myself} alt="Picture of me" width={210} height={380} className={styles.picture}/>
