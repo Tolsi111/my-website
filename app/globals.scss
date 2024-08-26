@@ -1,10 +1,13 @@
 :root {
   // Color
   // Default (dark) theme:
-  --color-bg-secondary: #18122b;
-  --color-bg-main: #180161;
+  // --color-bg-secondary: #18122b;
+  --color-bg-secondary: #213a57;
+  // --color-bg-main: #180161;
+  --color-bg-main: #0b6477;
   --background-squares: rgba(255, 255, 255, 0.2);
-  --color-text: #F0F3FF;
+  // --color-text: #F0F3FF;
+  --color-text: #80ed99;
 
 
   --color-navy-light: #393053;
@@ -23,6 +26,7 @@
   --color-main: #211951;
   // Sizing
   --spacing-small: 20px;
+  --spacing-xsmall: 10px;
   --border-radius-regular: 7px;
   // Z-index
   --z-index-background: -10;
