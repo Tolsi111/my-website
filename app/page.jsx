@@ -15,9 +15,16 @@ export default function Home() {
     </article>
     <article className={`${styles.contacts} ${styles.flex}`}>
       <h1>Romulus-Andrei Bacila</h1>
+      <ul>
+        <li >Linkedin</li>
+        <li >Github</li>
+        <li >My cv</li>
+        <li >Email</li>
+      </ul>
+      <svg></svg>
     </article>
     <article className={`${styles.me} ${styles.flex}`}>
-      <Image src={myself} alt="Picture of me" width={480} height={380} className={styles.picture}/>
+      <Image src={myself} alt="Picture of me" width={210} height={380} className={styles.picture}/>
     </article>
     <article className={`${styles.projects} ${styles.flex}`}>
       {/* nav link */}projects
