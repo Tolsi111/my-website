@@ -61,7 +61,7 @@
   grid-column: 5 / 8;
 }
 
-.contacts {
+.contacts {//TODO: redo position. animated sliders must be behind everything else
   grid-row: 3 / 10;
   grid-column: 1 / 3;
   position: relative;
@@ -125,7 +125,7 @@
 .contacts .slider {
   width: 100%;
   position: absolute;
-  margin-top: 220px;
+  margin-top: 250px;
   transform: rotate(-10deg);
 
   opacity: 0;
@@ -134,7 +134,7 @@
 .contacts .slider2 {
   width: 100%;
   position: absolute;
-  top: 130px;
+  top: 140px;
   transform: rotate(5deg);
 
   opacity: 0;

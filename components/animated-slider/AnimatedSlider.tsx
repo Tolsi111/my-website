@@ -4,20 +4,17 @@ import styles from "./AnimatedSlider.module.scss";
 
 interface AnimatedSliderProps {
   vectorGraphics: string[];
+  reverseAnimation?: boolean;
 }
 
-export default function AnimatedSlider({
-  vectorGraphics,
-}: {
-  vectorGraphics: string[];
-}) {
+export default function AnimatedSlider(Props: AnimatedSliderProps) {
   return (
     <div
       className={styles.slider}
-      style={{ "--quantity": vectorGraphics.length }} // add animation variable to props?
+      style={{ "--quantity": Props.vectorGraphics.length }} // add animation variable to props?
     >
       <div className={styles.list}>
-        {vectorGraphics.map((graphic, index) => {
+        {Props.vectorGraphics.map((graphic, index) => {
           return (
             <Image
               style={{ "--index": index }}
@@ -25,7 +22,11 @@ export default function AnimatedSlider({
               width={25}
               height={25}
               alt={"vector icon " + index}
-              className={styles.item}
+              className={`${styles.item} ${
+                Props.reverseAnimation
+                  ? styles["reverse-slide"]
+                  : styles["regular-slide"]
+              }`}
               key={index}
             />
           );

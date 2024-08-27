@@ -29,7 +29,7 @@ export default function Home() {
         <li >Email</li>
       </ul>
       <div className={styles.slider}>
-        <AnimatedSlider vectorGraphics={contactSliderImages}/>
+        <AnimatedSlider vectorGraphics={contactSliderImages} reverseAnimation={true}/>
       </div>
       <div className={styles.slider2}>
         <AnimatedSlider vectorGraphics={contactSliderImages}/>
