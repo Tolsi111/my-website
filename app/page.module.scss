@@ -147,6 +147,32 @@
   }
 }
 
+.hobbies .slider {
+  width: 50%;
+  position: absolute;
+  top: 0px;
+  left: -10px;
+  transform: rotate(-35deg);
+
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+.hobbies .slider2 {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  transform: rotate(-15deg);
+
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+.hobbies:hover {
+  .slider,
+  .slider2 {
+    opacity: 1;
+  }
+}
+
 /* Enable hover only on non-touch devices
 @media (hover: hover) and (pointer: fine) {
   .card:hover {

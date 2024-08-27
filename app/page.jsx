@@ -5,10 +5,20 @@ import email from "@/assets/email.svg";
 import github from "@/assets/github.svg";
 import linkedin from "@/assets/linkedin.svg";
 import phone from "@/assets/phone.svg";
+import puzzle2 from "@/assets/puzzle2.svg";
+import coding from "@/assets/coding.svg";
+import chess from "@/assets/chess.svg";
+import gamepad from "@/assets/gamepad.svg";
+import painting from "@/assets/painting.svg";
+import puzzle1 from "@/assets/puzzle1.svg";
+import soccer from "@/assets/soccer.svg";
 import AnimatedSlider from "@/components/animated-slider/AnimatedSlider";
 
 export default function Home() {
-  const contactSliderImages = [email, github, linkedin, phone ]
+  const contactSliderImages = [email, github, linkedin, phone];
+  const hobbiesSliderImagesFirst = [puzzle2, coding, chess];
+  const hobbiesSliderImagesSecond = [gamepad, painting, puzzle1, soccer];
+  
 
   return (
   <main className={styles['main-container']}>
@@ -43,6 +53,12 @@ export default function Home() {
     </article>
     <article className={`${styles.hobbies} ${styles.flex}`}>
       {/* split this in two? one for hobbies and one for dark mode switch */}hobbies
+      <div className={styles.slider}>
+        <AnimatedSlider vectorGraphics={hobbiesSliderImagesFirst}/>
+      </div>
+      <div className={styles.slider2}>
+        <AnimatedSlider vectorGraphics={hobbiesSliderImagesSecond} reverseAnimation={true}/>
+      </div>
     </article>
     <article className={`${styles.education} ${styles.flex}`}>
       {/* button */}education
