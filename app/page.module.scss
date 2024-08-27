@@ -120,7 +120,32 @@
   align-items: center;
 }
 
-// Contacts section
+// SLIDERS
+
+.contacts .slider {
+  width: 100%;
+  position: absolute;
+  margin-top: 220px;
+  transform: rotate(-10deg);
+
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+.contacts .slider2 {
+  width: 100%;
+  position: absolute;
+  top: 130px;
+  transform: rotate(5deg);
+
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+.contacts:hover {
+  .slider,
+  .slider2 {
+    opacity: 1;
+  }
+}
 
 /* Enable hover only on non-touch devices
 @media (hover: hover) and (pointer: fine) {
