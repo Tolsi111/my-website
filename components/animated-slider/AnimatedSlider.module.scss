@@ -17,13 +17,13 @@
 }
 
 .slider .list .regular-slide {
-    animation: slide 5s linear infinite;
-    animation-delay: calc( -1 * (5s / var(--quantity)) * (var(--index) ) );
+    animation: slide 6s linear infinite;
+    animation-delay: calc( -1 * (6s / var(--quantity)) * (var(--index) ) );
 }
 
 .slider .list .reverse-slide {
-    animation: slideReverse 5s linear infinite;
-    animation-delay: calc( -1 * (5s / var(--quantity)) * (var(--index) ) );
+    animation: slideReverse 6s linear infinite;
+    animation-delay: calc( -1 * (6s / var(--quantity)) * (var(--index) ) );
 }
 
 @keyframes slide {

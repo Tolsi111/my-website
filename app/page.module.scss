@@ -173,6 +173,32 @@
   }
 }
 
+.experience .slider {
+  width: 50%;
+  position: absolute;
+  top: 5px;
+  left: -10px;
+  transform: rotate(-20deg);
+
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+.experience .slider2 {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  transform: rotate(5deg);
+
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+.experience:hover {
+  .slider,
+  .slider2 {
+    opacity: 1;
+  }
+}
+
 /* Enable hover only on non-touch devices
 @media (hover: hover) and (pointer: fine) {
   .card:hover {

@@ -12,12 +12,22 @@ import gamepad from "@/assets/gamepad.svg";
 import painting from "@/assets/painting.svg";
 import puzzle1 from "@/assets/puzzle1.svg";
 import soccer from "@/assets/soccer.svg";
+import slack from "@/assets/slack.svg";
+import jira from "@/assets/jira.svg";
+import git from "@/assets/git.svg";
+import angular from "@/assets/angular.svg";
+import databases from "@/assets/databases.svg";
+import java from "@/assets/java.svg";
+import react from "@/assets/react.svg";
+import spring from "@/assets/spring.svg";
 import AnimatedSlider from "@/components/animated-slider/AnimatedSlider";
 
 export default function Home() {
   const contactSliderImages = [email, github, linkedin, phone];
   const hobbiesSliderImagesFirst = [puzzle2, coding, chess];
   const hobbiesSliderImagesSecond = [gamepad, painting, puzzle1, soccer];
+  const experienceSliderImagesfirst = [slack, jira, git];
+  const experienceSliderImagesSecond = [angular, databases, java, react, spring];
   
 
   return (
@@ -29,6 +39,12 @@ export default function Home() {
     </article>
     <article className={`${styles.experience} ${styles.flex}`}>
       {/* nav link */}experience
+      <div className={styles.slider}>
+        <AnimatedSlider vectorGraphics={experienceSliderImagesfirst} reverseAnimation={true}/>
+      </div>
+      <div className={styles.slider2}>
+        <AnimatedSlider vectorGraphics={experienceSliderImagesSecond} reverseAnimation={true}/>
+      </div>
     </article>
     <article className={`${styles.contacts} ${styles.flex}`}>
       <h1>Romulus-Andrei Bacila</h1>
