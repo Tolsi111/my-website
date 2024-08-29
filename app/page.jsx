@@ -20,15 +20,28 @@ import databases from "@/assets/databases.svg";
 import java from "@/assets/java.svg";
 import react from "@/assets/react.svg";
 import spring from "@/assets/spring.svg";
+import debug from "@/assets/debug.svg";
+import css from "@/assets/css.svg";
+import firebase from "@/assets/firebase.svg";
+import postman from "@/assets/postman.svg";
+import html from "@/assets/html.svg";
+import javascript from "@/assets/javascript.svg";
+import nextjs from "@/assets/nextjs.svg";
+import typescript from "@/assets/typescript.svg";
 import AnimatedSlider from "@/components/animated-slider/AnimatedSlider";
 
 export default function Home() {
   const contactSliderImages = [email, github, linkedin, phone];
+  // hobbies
   const hobbiesSliderImagesFirst = [puzzle2, coding, chess];
   const hobbiesSliderImagesSecond = [gamepad, painting, puzzle1, soccer];
+  // experience
   const experienceSliderImagesfirst = [slack, jira, git];
   const experienceSliderImagesSecond = [angular, databases, java, react, spring];
-  
+  // projects
+  const sliderImagesFrameworks = [angular, react, spring, nextjs];
+  const sliderImagesLanguages = [html, javascript, css, typescript];
+  const sliderImagesTools = [firebase, git, postman, debug];
 
   return (
   <main className={styles['main-container']}>
@@ -40,7 +53,7 @@ export default function Home() {
     <article className={`${styles.experience} ${styles.flex}`}>
       {/* nav link */}experience
       <div className={styles.slider}>
-        <AnimatedSlider vectorGraphics={experienceSliderImagesfirst} reverseAnimation={true}/>
+        <AnimatedSlider vectorGraphics={experienceSliderImagesfirst}/>
       </div>
       <div className={styles.slider2}>
         <AnimatedSlider vectorGraphics={experienceSliderImagesSecond} reverseAnimation={true}/>
@@ -66,6 +79,15 @@ export default function Home() {
     </article>
     <article className={`${styles.projects} ${styles.flex}`}>
       {/* nav link */}projects
+      <div className={styles.slider}>
+        <AnimatedSlider vectorGraphics={sliderImagesFrameworks} reverseAnimation={true}/>
+      </div>
+      <div className={styles.slider2}>
+        <AnimatedSlider vectorGraphics={sliderImagesLanguages}/>
+      </div>
+      <div className={styles.slider3}>
+        <AnimatedSlider vectorGraphics={sliderImagesTools} reverseAnimation={true}/>
+      </div>
     </article>
     <article className={`${styles.hobbies} ${styles.flex}`}>
       {/* split this in two? one for hobbies and one for dark mode switch */}hobbies
