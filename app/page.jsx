@@ -28,9 +28,12 @@ import html from "@/assets/html.svg";
 import javascript from "@/assets/javascript.svg";
 import nextjs from "@/assets/nextjs.svg";
 import typescript from "@/assets/typescript.svg";
+import moon from "@/assets/moon.svg";
+import sun from "@/assets/sun.svg";
 import AnimatedSlider from "@/components/animated-slider/AnimatedSlider";
 
 export default function Home() {
+  // contact
   const contactSliderImages = [email, github, linkedin, phone];
   // hobbies
   const hobbiesSliderImagesFirst = [puzzle2, coding, chess];
@@ -42,6 +45,8 @@ export default function Home() {
   const sliderImagesFrameworks = [angular, react, spring, nextjs];
   const sliderImagesLanguages = [html, javascript, css, typescript];
   const sliderImagesTools = [firebase, git, postman, debug];
+  // theme
+  const sliderImagesTheme = [moon, sun];
 
   return (
   <main className={styles['main-container']}>
@@ -103,6 +108,9 @@ export default function Home() {
     </article>
     <article className={`${styles.theme} ${styles.flex}`}>
       {/* button */}theme
+      <div className={styles.slider}>
+        <AnimatedSlider vectorGraphics={sliderImagesTheme} reverseAnimation={true}/>
+      </div>
     </article>
   </main>
   );
