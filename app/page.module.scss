@@ -252,6 +252,23 @@
   }
 }
 
+.education .slider {// education
+  width: 60%;
+  position: absolute;
+  right: 0;
+  top: 5px;
+  transform: rotate(23deg);
+
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+.education:hover {
+  .slider {
+    opacity: 1;
+  }
+}
+
+
 /* Enable hover only on non-touch devices
 @media (hover: hover) and (pointer: fine) {
   .card:hover {

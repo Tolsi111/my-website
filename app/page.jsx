@@ -30,6 +30,8 @@ import nextjs from "@/assets/nextjs.svg";
 import typescript from "@/assets/typescript.svg";
 import moon from "@/assets/moon.svg";
 import sun from "@/assets/sun.svg";
+import math from "@/assets/math.svg";
+import graduation from "@/assets/graduation.svg";
 import AnimatedSlider from "@/components/animated-slider/AnimatedSlider";
 
 export default function Home() {
@@ -47,6 +49,8 @@ export default function Home() {
   const sliderImagesTools = [firebase, git, postman, debug];
   // theme
   const sliderImagesTheme = [moon, sun];
+  // education
+  const sliderImagesEducation = [math, graduation, coding];
 
   return (
   <main className={styles['main-container']}>
@@ -105,6 +109,9 @@ export default function Home() {
     </article>
     <article className={`${styles.education} ${styles.flex}`}>
       {/* button */}education
+      <div className={styles.slider}>
+        <AnimatedSlider vectorGraphics={sliderImagesEducation}/>
+      </div>
     </article>
     <article className={`${styles.theme} ${styles.flex}`}>
       {/* button */}theme
