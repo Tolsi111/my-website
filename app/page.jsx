@@ -54,13 +54,13 @@ export default function Home() {
 
   return (
   <main className={styles['main-container']}>
-    <article className={`${styles.title} ${styles.flex}`}>
+    <article className={`${styles.title}`}>
       <h1>Full-stack Web Developer</h1>
       <h2>With a Front-end focus</h2>
       <h3>Also, React is my favourite</h3>
     </article>
-    <article className={`${styles.experience} ${styles.flex}`}>
-      {/* nav link */}experience
+    <article className={`${styles.experience}`}>
+      {/* nav link */}Work experience
       <div className={styles.slider}>
         <AnimatedSlider vectorGraphics={experienceSliderImagesfirst}/>
       </div>
@@ -68,14 +68,14 @@ export default function Home() {
         <AnimatedSlider vectorGraphics={experienceSliderImagesSecond} reverseAnimation={true}/>
       </div>
     </article>
-    <article className={`${styles.contacts} ${styles.flex}`}>
-      <h1>Romulus-Andrei Bacila</h1>
-      <ul>
-        <li >Linkedin</li>
-        <li >Github</li>
-        <li >My cv</li>
-        <li >Email</li>
-      </ul>
+    <article className={`${styles.contacts}`}>
+      Contacts
+      {/* <ul>
+        <li>Linkedin</li>
+        <li>Github</li>
+        <li>My cv</li>
+        <li>Email</li>
+      </ul> */}
       <div className={styles.slider}>
         <AnimatedSlider vectorGraphics={contactSliderImages} reverseAnimation={true}/>
       </div>
@@ -83,11 +83,14 @@ export default function Home() {
         <AnimatedSlider vectorGraphics={contactSliderImages}/>
       </div>
     </article>
-    <article className={`${styles.me} ${styles.flex}`}>
-      <Image src={myself} alt="Picture of me" width={210} height={380} className={styles.picture}/>
+    <article className={`${styles.me}`}>
+      <h1>Romulus-Andrei Bacila</h1>
+      <div className={styles.flex}>
+        <Image src={myself} alt="Picture of me" width={210} height={380} className={styles.picture}/>
+      </div>
     </article>
-    <article className={`${styles.projects} ${styles.flex}`}>
-      {/* nav link */}projects
+    <article className={`${styles.projects}`}>
+      {/* nav link */}Check out some of my work
       <div className={styles.slider}>
         <AnimatedSlider vectorGraphics={sliderImagesFrameworks} reverseAnimation={true}/>
       </div>
@@ -98,23 +101,23 @@ export default function Home() {
         <AnimatedSlider vectorGraphics={sliderImagesTools} reverseAnimation={true}/>
       </div>
     </article>
-    <article className={`${styles.hobbies} ${styles.flex}`}>
-      {/* split this in two? one for hobbies and one for dark mode switch */}hobbies
+    <article className={`${styles.hobbies}`}>
+      {/* split this in two? one for hobbies and one for dark mode switch */}My hobbies
       <div className={styles.slider}>
-        <AnimatedSlider vectorGraphics={hobbiesSliderImagesFirst}/>
+        <AnimatedSlider vectorGraphics={hobbiesSliderImagesFirst} reverseAnimation={true}/>
       </div>
       <div className={styles.slider2}>
         <AnimatedSlider vectorGraphics={hobbiesSliderImagesSecond} reverseAnimation={true}/>
       </div>
     </article>
-    <article className={`${styles.education} ${styles.flex}`}>
-      {/* button */}education
+    <article className={`${styles.education}`}>
+      {/* button */}Education
       <div className={styles.slider}>
         <AnimatedSlider vectorGraphics={sliderImagesEducation}/>
       </div>
     </article>
-    <article className={`${styles.theme} ${styles.flex}`}>
-      {/* button */}theme
+    <article className={`${styles.theme}`}>
+      {/* button */}Change theme
       <div className={styles.slider}>
         <AnimatedSlider vectorGraphics={sliderImagesTheme} reverseAnimation={true}/>
       </div>

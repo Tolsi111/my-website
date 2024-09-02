@@ -20,40 +20,20 @@
   border-style: solid;
   overflow: hidden;
   color: var(--color-text);
-  // box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4), 3px 3px 3px var(--color-bg-main) inset;
-  // backdrop-filter: blur(20px);
-  // -webkit-backdrop-filter: blur(20px);
+  padding: var(--spacing-small);
   background-color: var(--color-bg-secondary);
   transition: transform .3s, box-shadow 2s;
-
-  &:hover {
-    // transform: translate(1px,2px);
-    // box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4) inset, 3px 3px 3px var(--color-light-navy);
-    // background-color: var(--color-navy-dark);
-  }
 }
-// .main-container > *:not(.me):hover::after { use these to animate the background
-//     content: '';
-//     position: absolute;
-//     height: 100%;
-//     width: 100%;
-//     background-color: var(--color-navy-dark);
-//     z-index: -1;
-//     box-shadow: 3px 3px 3px var(--color-light-navy) inset;
-// }
-
-// .main-container > *:not(.me):after {
-//   border-radius: var(--border-radius-regular);
-//   content: "";
-//   width: 100%;
-//   height: 100%;
-//   position: absolute;
-// }
 
 .title {
   grid-row: 1 / 3;
   grid-column: 1 / 5;
   flex-direction: column;
+  align-items: flex-start;
+
+  h1, h2, h3 {
+    display: flex;
+  }
 }
 
 .experience {
@@ -61,17 +41,11 @@
   grid-column: 5 / 8;
 }
 
-.contacts {//TODO: redo position. animated sliders must be behind everything else
+.contacts {
   grid-row: 3 / 10;
   grid-column: 1 / 3;
-  position: relative;
-  h1 {
-    position: absolute;
-    top: 0;
-    padding: var(--spacing-small) var(--spacing-xsmall);
-    text-align: left;
-  }
   ul {
+    margin-top: 80px;
     list-style: none;
     li {
       display: flex;
@@ -84,15 +58,25 @@
   grid-row: 3 / 8;
   grid-column: 3 / 8;
 }
+// .me:before {// transparent inner section
+//   content:'';
+//   position:absolute;
+//   left: 25px;
+//   bottom: 25px;
+//   border-radius: var(--border-radius-regular);
+//   border-style: solid;
+//   color: var(--color-text);
+  
+//   width:190px; height:220px;
+//   // width:190px; height:180px;
+
+//   // box-shadow: 0px 0px 0px 300px var(--color-bg-secondary);
+//   z-index: -1;
+// }
 
 .projects {
   grid-row: 1 / 8;
   grid-column: 8 / 10;
-}
-
-.hobbies {
-  grid-row: 8 / 10;
-  grid-column: 3 / 5;
 }
 
 .hobbies {
@@ -112,6 +96,7 @@
 
 .picture {
   object-fit: cover;
+  margin-top: 10px;
 }
 
 .flex {
@@ -125,7 +110,8 @@
 .contacts .slider {// contact
   width: 100%;
   position: absolute;
-  margin-top: 250px;
+  bottom: 50px;
+  left: 0;
   transform: rotate(-10deg);
 
   opacity: 0;
@@ -135,6 +121,7 @@
   width: 100%;
   position: absolute;
   top: 140px;
+  left: 0;
   transform: rotate(5deg);
 
   opacity: 0;
@@ -147,12 +134,12 @@
   }
 }
 
-.hobbies .slider {// slider
+.hobbies .slider {// hobbies
   width: 50%;
   position: absolute;
-  top: 0px;
+  bottom: 0px;
   left: -10px;
-  transform: rotate(-35deg);
+  transform: rotate(35deg);
 
   opacity: 0;
   transition: opacity 0.2s ease-in;
@@ -161,7 +148,7 @@
   width: 100%;
   position: absolute;
   bottom: 10px;
-  transform: rotate(-15deg);
+  transform: rotate(-25deg);
 
   opacity: 0;
   transition: opacity 0.3s ease-in;
@@ -177,8 +164,8 @@
   width: 50%;
   position: absolute;
   top: 5px;
-  left: -10px;
-  transform: rotate(-20deg);
+  right: -10px;
+  transform: rotate(30deg);
 
   opacity: 0;
   transition: opacity 0.2s ease-in;
@@ -186,7 +173,8 @@
 .experience .slider2 {
   width: 100%;
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
+  left: 0;
   transform: rotate(5deg);
 
   opacity: 0;
@@ -202,9 +190,9 @@
 .projects .slider {// projects
   width: 100%;
   position: absolute;
-  top: 10px;
-  left: 10px;
-  transform: rotate(20deg);
+  top: 100px;
+  left: 0;
+  transform: rotate(5deg);
 
   opacity: 0;
   transition: opacity 0.2s ease-in;
@@ -212,8 +200,9 @@
 .projects .slider2 {
   width: 110%;
   position: absolute;
-  top: 150px;
-  transform: rotate(-20deg);
+  top: 200px;
+  left: -10px;
+  transform: rotate(-18deg);
 
   opacity: 0;
   transition: opacity 0.3s ease-in;
@@ -222,6 +211,7 @@
   width: 100%;
   position: absolute;
   bottom: 100px;
+  left: 0;
   transform: rotate(5deg);
 
   opacity: 0;
@@ -255,9 +245,9 @@
 .education .slider {// education
   width: 60%;
   position: absolute;
-  right: 0;
+  right: -10px;
   top: 5px;
-  transform: rotate(23deg);
+  transform: rotate(30deg);
 
   opacity: 0;
   transition: opacity 0.2s ease-in;
