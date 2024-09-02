@@ -60,7 +60,7 @@ export default function Home() {
       <h3>Also, React is my favourite</h3>
     </article>
     <article className={`${styles.experience}`}>
-      {/* nav link */}Work experience
+      {/* nav link */}<p>Work experience</p>
       <div className={styles.slider}>
         <AnimatedSlider vectorGraphics={experienceSliderImagesfirst}/>
       </div>
@@ -69,7 +69,7 @@ export default function Home() {
       </div>
     </article>
     <article className={`${styles.contacts}`}>
-      Contacts
+      <p>Contacts</p>
       {/* <ul>
         <li>Linkedin</li>
         <li>Github</li>
@@ -90,7 +90,7 @@ export default function Home() {
       </div>
     </article>
     <article className={`${styles.projects}`}>
-      {/* nav link */}Check out some of my work
+      {/* nav link */}<p>Check out some of my work</p>
       <div className={styles.slider}>
         <AnimatedSlider vectorGraphics={sliderImagesFrameworks} reverseAnimation={true}/>
       </div>
@@ -102,7 +102,7 @@ export default function Home() {
       </div>
     </article>
     <article className={`${styles.hobbies}`}>
-      {/* split this in two? one for hobbies and one for dark mode switch */}My hobbies
+      {/* split this in two? one for hobbies and one for dark mode switch */}<p>My hobbies</p>
       <div className={styles.slider}>
         <AnimatedSlider vectorGraphics={hobbiesSliderImagesFirst} reverseAnimation={true}/>
       </div>
@@ -111,13 +111,13 @@ export default function Home() {
       </div>
     </article>
     <article className={`${styles.education}`}>
-      {/* button */}Education
+      {/* button */}<p>Education</p>
       <div className={styles.slider}>
         <AnimatedSlider vectorGraphics={sliderImagesEducation}/>
       </div>
     </article>
     <article className={`${styles.theme}`}>
-      {/* button */}Change theme
+      {/* button */}<p>Change theme</p>
       <div className={styles.slider}>
         <AnimatedSlider vectorGraphics={sliderImagesTheme} reverseAnimation={true}/>
       </div>
