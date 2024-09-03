@@ -33,6 +33,7 @@ import sun from "@/assets/sun.svg";
 import math from "@/assets/math.svg";
 import graduation from "@/assets/graduation.svg";
 import AnimatedSlider from "@/components/animated-slider/AnimatedSlider";
+import Link from "next/link";
 
 export default function Home() {
   // contact
@@ -60,7 +61,7 @@ export default function Home() {
       <h3>Also, React is my favourite</h3>
     </article>
     <article className={`${styles.experience}`}>
-      {/* nav link */}<p>Work experience</p>
+    <p><Link href={"/experience"}>Work experience</Link></p>
       <div className={styles.slider}>
         <AnimatedSlider vectorGraphics={experienceSliderImagesfirst}/>
       </div>
@@ -90,7 +91,7 @@ export default function Home() {
       </div>
     </article>
     <article className={`${styles.projects}`}>
-      {/* nav link */}<p>Check out some of my work</p>
+    <p><Link href={"/projects"}>Check out some of my work</Link></p>
       <div className={styles.slider}>
         <AnimatedSlider vectorGraphics={sliderImagesFrameworks} reverseAnimation={true}/>
       </div>
@@ -102,7 +103,7 @@ export default function Home() {
       </div>
     </article>
     <article className={`${styles.hobbies}`}>
-      {/* split this in two? one for hobbies and one for dark mode switch */}<p>My hobbies</p>
+      <p><Link href={"/hobbies"}>My hobbies</Link></p>
       <div className={styles.slider}>
         <AnimatedSlider vectorGraphics={hobbiesSliderImagesFirst} reverseAnimation={true}/>
       </div>
