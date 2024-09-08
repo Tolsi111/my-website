@@ -32,6 +32,7 @@ import moon from "@/assets/moon.svg";
 import sun from "@/assets/sun.svg";
 import math from "@/assets/math.svg";
 import graduation from "@/assets/graduation.svg";
+import navarrow from "@/assets/navarrow.svg"
 import AnimatedSlider from "@/components/animated-slider/AnimatedSlider";
 import Link from "next/link";
 
@@ -61,7 +62,8 @@ export default function Home() {
       <h3>Also, React is my favourite</h3>
     </article>
     <article className={`${styles.experience}`}>
-    <p><Link href={"/experience"}>Work experience</Link></p>
+      <p className={styles.navigation}>Work experience</p>
+      <Link href={"/experience"} className={styles.navarrow}><Image src={navarrow} width={30} height={30} alt="navigate to work experience page"/></Link>
       <div className={styles.slider}>
         <AnimatedSlider vectorGraphics={experienceSliderImagesfirst}/>
       </div>
@@ -91,7 +93,8 @@ export default function Home() {
       </div>
     </article>
     <article className={`${styles.projects}`}>
-    <p><Link href={"/projects"}>Check out some of my work</Link></p>
+      <p className={styles.navigation}>Check out some of my work</p>
+      <Link href={"/projects"} className={styles.navarrow}><Image src={navarrow} width={30} height={30} alt="navigate to portfolio page"/></Link>
       <div className={styles.slider}>
         <AnimatedSlider vectorGraphics={sliderImagesFrameworks} reverseAnimation={true}/>
       </div>
@@ -103,7 +106,8 @@ export default function Home() {
       </div>
     </article>
     <article className={`${styles.hobbies}`}>
-      <p><Link href={"/hobbies"}>My hobbies</Link></p>
+      <p className={styles.navigation}>My hobbies</p>
+      <Link href={"/hobbies"} className={styles.navarrow}><Image src={navarrow} width={30} height={30} alt="navigate to hobbies page"/></Link>
       <div className={styles.slider}>
         <AnimatedSlider vectorGraphics={hobbiesSliderImagesFirst} reverseAnimation={true}/>
       </div>

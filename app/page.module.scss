@@ -138,8 +138,8 @@
   width: 50%;
   position: absolute;
   bottom: 0px;
-  left: -10px;
-  transform: rotate(35deg);
+  left: -25px;
+  transform: rotate(30deg);
 
   opacity: 0;
   transition: opacity 0.2s ease-in;
@@ -190,7 +190,7 @@
 .projects .slider {// projects
   width: 100%;
   position: absolute;
-  top: 100px;
+  top: 200px;
   left: 0;
   transform: rotate(5deg);
 
@@ -200,7 +200,7 @@
 .projects .slider2 {
   width: 110%;
   position: absolute;
-  top: 200px;
+  top: 300px;
   left: -10px;
   transform: rotate(-18deg);
 
@@ -258,6 +258,69 @@
   }
 }
 
+.navarrow {
+  display: flex;
+  position: relative;
+  height: 30px;
+  width: 30px;
+  transition: translate 0.2s;
+  overflow: visible;
+  z-index: 1;
+
+  img {
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--border-radius-regular);
+  }
+}
+
+// NAVIGATION BAUTTONS
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.experience:hover,
+.projects:hover,
+.hobbies:hover {
+    .navarrow {
+      translate: 1px 8px;
+      // background-color: blue;
+      // background-color: var(--color-bg-secondary);
+    }
+    .navarrow::after, .navarrow::before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      border-radius: var(--border-radius-regular);
+      // translate: 2px 5px;
+      opacity: 0.8;
+      // background-image: conic-gradient(var(--color-text-secondary), var(--color-bg-main), var(--color-text), var(--color-bg-main), var(--color-text-secondary));
+      background-image: conic-gradient(from var(--angle),var(--color-text-secondary), transparent, var(--color-text-secondary), transparent, var(--color-text-secondary));
+      left: -2px;
+      top: -2px;
+      padding: 2px;
+      z-index: -1;
+      animation: spin 5s linear infinite;
+    }
+
+    .navarrow:hover::after, .navarrow:hover::before {
+      animation: spin 1s linear infinite;
+    }
+    
+    .navarrow::before {
+      filter: blur(.1rem)
+    }
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
 
 /* Enable hover only on non-touch devices
 @media (hover: hover) and (pointer: fine) {
