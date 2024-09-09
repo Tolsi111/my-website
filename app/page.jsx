@@ -62,7 +62,7 @@ export default function Home() {
       <h3>Also, React is my favourite</h3>
     </article>
     <article className={`${styles.experience}`}>
-      <p className={styles.navigation}>Work experience</p>
+      <h3 className={styles.navigation}>Work experience</h3>
       <Link href={"/experience"} className={styles.navarrow}><Image src={navarrow} width={30} height={30} alt="navigate to work experience page"/></Link>
       <div className={styles.slider}>
         <AnimatedSlider vectorGraphics={experienceSliderImagesfirst}/>
@@ -72,13 +72,13 @@ export default function Home() {
       </div>
     </article>
     <article className={`${styles.contacts}`}>
-      <p>Contacts</p>
-      {/* <ul>
+      <h3>Contacts</h3>
+      <ul>
         <li>Linkedin</li>
         <li>Github</li>
         <li>My cv</li>
         <li>Email</li>
-      </ul> */}
+      </ul>
       <div className={styles.slider}>
         <AnimatedSlider vectorGraphics={contactSliderImages} reverseAnimation={true}/>
       </div>
@@ -93,7 +93,7 @@ export default function Home() {
       </div>
     </article>
     <article className={`${styles.projects}`}>
-      <p className={styles.navigation}>Check out some of my work</p>
+      <h3 className={styles.navigation}>Check out some of my work</h3>
       <Link href={"/projects"} className={styles.navarrow}><Image src={navarrow} width={30} height={30} alt="navigate to portfolio page"/></Link>
       <div className={styles.slider}>
         <AnimatedSlider vectorGraphics={sliderImagesFrameworks} reverseAnimation={true}/>
@@ -106,7 +106,7 @@ export default function Home() {
       </div>
     </article>
     <article className={`${styles.hobbies}`}>
-      <p className={styles.navigation}>My hobbies</p>
+      <h3 className={styles.navigation}>My hobbies</h3>
       <Link href={"/hobbies"} className={styles.navarrow}><Image src={navarrow} width={30} height={30} alt="navigate to hobbies page"/></Link>
       <div className={styles.slider}>
         <AnimatedSlider vectorGraphics={hobbiesSliderImagesFirst} reverseAnimation={true}/>
@@ -116,13 +116,13 @@ export default function Home() {
       </div>
     </article>
     <article className={`${styles.education}`}>
-      {/* button */}<p>Education</p>
+      <h3>Education</h3>
       <div className={styles.slider}>
         <AnimatedSlider vectorGraphics={sliderImagesEducation}/>
       </div>
     </article>
     <article className={`${styles.theme}`}>
-      {/* button */}<p>Change theme</p>
+      <h3>Change theme</h3>
       <div className={styles.slider}>
         <AnimatedSlider vectorGraphics={sliderImagesTheme} reverseAnimation={true}/>
       </div>
