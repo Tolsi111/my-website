@@ -105,9 +105,9 @@ export default function Home() {
         <AnimatedSlider vectorGraphics={sliderImagesTools} reverseAnimation={true}/>
       </div>
     </article>
-    <article className={`${styles.hobbies}`}>
-      <h3 className={styles.navigation}>My hobbies</h3>
-      <Link href={"/hobbies"} className={styles.navarrow}><Image src={navarrow} width={30} height={30} alt="navigate to hobbies page"/></Link>
+    <article className={`${styles.about}`}>
+      <h3 className={styles.navigation}>About me</h3>
+      <Link href={"/about"} className={styles.navarrow}><Image src={navarrow} width={30} height={30} alt="navigate to hobbies page"/></Link>
       <div className={styles.slider}>
         <AnimatedSlider vectorGraphics={hobbiesSliderImagesFirst} reverseAnimation={true}/>
       </div>

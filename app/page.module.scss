@@ -79,7 +79,7 @@
   grid-column: 8 / 10;
 }
 
-.hobbies {
+.about {
   grid-row: 8 / 10;
   grid-column: 3 / 6;
 }
@@ -110,7 +110,7 @@
 .contacts .slider {// contact
   width: 100%;
   position: absolute;
-  bottom: 50px;
+  bottom: 100px;
   left: 0;
   transform: rotate(-10deg);
 
@@ -120,7 +120,7 @@
 .contacts .slider2 {
   width: 100%;
   position: absolute;
-  top: 140px;
+  top: 250px;
   left: 0;
   transform: rotate(5deg);
 
@@ -134,7 +134,7 @@
   }
 }
 
-.hobbies .slider {// hobbies
+.about .slider {// about
   width: 50%;
   position: absolute;
   bottom: 0px;
@@ -144,7 +144,7 @@
   opacity: 0;
   transition: opacity 0.2s ease-in;
 }
-.hobbies .slider2 {
+.about .slider2 {
   width: 100%;
   position: absolute;
   bottom: 10px;
@@ -153,7 +153,7 @@
   opacity: 0;
   transition: opacity 0.3s ease-in;
 }
-.hobbies:hover {
+.about:hover {
   .slider,
   .slider2 {
     opacity: 1;
@@ -264,8 +264,9 @@
   height: 30px;
   width: 30px;
   transition: translate 0.2s;
-  overflow: visible;
-  z-index: 1;
+  // overflow: visible;
+  // z-index: 0;
+  animation: navarrowAnimation 0.3s;
 
   img {
   background-color: var(--color-bg-secondary);
@@ -281,11 +282,11 @@
 }
 .experience:hover,
 .projects:hover,
-.hobbies:hover {
+.about:hover {
     .navarrow {
       translate: 1px 8px;
     }
-    .navarrow::after, .navarrow::before {
+    .navarrow::before {
       content: '';
       position: absolute;
       height: 100%;
@@ -300,7 +301,7 @@
       animation: spin 5s linear infinite;
     }
 
-    .navarrow:hover::after, .navarrow:hover::before {
+    .navarrow:hover::before {
       animation: spin 1s linear infinite;
     }
 }
@@ -311,6 +312,21 @@
   }
   to {
     --angle: 360deg;
+  }
+}
+
+@keyframes navarrowAnimation {
+  0% {
+      transform: translateX(-20px);
+      opacity: 0;
+  }
+
+  60% {
+  }
+
+  100% {
+      opacity: 1;
+      transform: none;
   }
 }
 
