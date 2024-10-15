@@ -107,6 +107,8 @@
 
 // SLIDERS
 
+
+
 .contacts .slider {// contact
   width: 100%;
   position: absolute;
@@ -115,7 +117,7 @@
   transform: rotate(-10deg);
 
   opacity: 0;
-  transition: opacity 0.2s ease-in;
+  transition: opacity 0.3s ease-in;
 }
 .contacts .slider2 {
   width: 100%;
@@ -142,7 +144,7 @@
   transform: rotate(30deg);
 
   opacity: 0;
-  transition: opacity 0.2s ease-in;
+  transition: opacity 0.3s ease-in;
 }
 .about .slider2 {
   width: 100%;
@@ -168,7 +170,7 @@
   transform: rotate(30deg);
 
   opacity: 0;
-  transition: opacity 0.2s ease-in;
+  transition: opacity 0.3s ease-in;
 }
 .experience .slider2 {
   width: 100%;
@@ -195,7 +197,7 @@
   transform: rotate(5deg);
 
   opacity: 0;
-  transition: opacity 0.2s ease-in;
+  transition: opacity 0.3s ease-in;
 }
 .projects .slider2 {
   width: 110%;
@@ -234,7 +236,7 @@
   transform: rotate(23deg);
 
   opacity: 0;
-  transition: opacity 0.2s ease-in;
+  transition: opacity 0.3s ease-in;
 }
 .theme:hover {
   .slider {
@@ -250,7 +252,7 @@
   transform: rotate(30deg);
 
   opacity: 0;
-  transition: opacity 0.2s ease-in;
+  transition: opacity 0.3s ease-in;
 }
 .education:hover {
   .slider {
@@ -264,8 +266,6 @@
   height: 30px;
   width: 30px;
   transition: translate 0.2s;
-  // overflow: visible;
-  // z-index: 0;
   animation: navarrowAnimation 0.3s;
 
   svg {
@@ -320,10 +320,6 @@
       transform: translateX(-20px);
       opacity: 0;
   }
-
-  60% {
-  }
-
   100% {
       opacity: 1;
       transform: none;
