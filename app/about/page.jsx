@@ -1,5 +1,5 @@
 export default function Hobbies() {
     return (
-        <h1>Hobbies</h1>
+        <h1>About me</h1>
     )
 }

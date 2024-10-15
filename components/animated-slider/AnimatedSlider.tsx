@@ -11,7 +11,7 @@ export default function AnimatedSlider(Props: AnimatedSliderProps) {
   return (
     <div
       className={styles.slider}
-      style={{ "--quantity": Props.vectorGraphics.length }} // add animation variable to props?
+      style={{ "--quantity": Props.vectorGraphics.length }}
     >
       <div className={styles.list}>
         {Props.vectorGraphics.map((graphic, index) => {
