@@ -118,6 +118,7 @@ export default function Home() {
     </article>
     <article className={`${styles.education}`}>
       <h3>Education</h3>
+      <Link href={"/education"} className={styles.navarrow}><NavigationArrow/></Link>
       <div className={styles.slider}>
         <AnimatedSlider vectorGraphics={sliderImagesEducation}/>
       </div>
