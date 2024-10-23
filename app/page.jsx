@@ -36,6 +36,7 @@ import navarrow from "@/assets/navarrow.svg"
 import AnimatedSlider from "@/components/animated-slider/AnimatedSlider";
 import Link from "next/link";
 import NavigationArrow from "@/components/navigation-arrow/NavigationArrow";
+import ExternalLinkButton from "@/components/external-link-button/ExternalLinkButton";
 
 export default function Home() {
   // contact
@@ -75,10 +76,9 @@ export default function Home() {
     <article className={`${styles.contacts}`}>
       <h3>Contacts</h3>
       <ul>
-        <li>Linkedin</li>
-        <li>Github</li>
-        <li>My cv</li>
-        <li>Email</li>
+        <li><ExternalLinkButton targetUrl="https://www.linkedin.com/in/romulus-andrei-bacila-662b1b196/" linkText="Linkedin"/></li>
+        <li><ExternalLinkButton targetUrl="https://github.com/Tolsi111" linkText="Github"/></li>
+        <li><ExternalLinkButton targetUrl="https://tolsi111.github.io/CSS-My-website/Romulus-Andrei%20Bacila%20CV%20Final.pdf" linkText="My CV"/></li>
       </ul>
       <div className={styles.slider}>
         <AnimatedSlider vectorGraphics={contactSliderImages} reverseAnimation={true}/>
