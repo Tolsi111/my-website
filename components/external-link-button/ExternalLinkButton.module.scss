@@ -1,0 +1,22 @@
+.link {
+    position: absolute;
+    transition: transform 0.2s;
+}
+
+.underline {
+    margin-left: auto;
+    margin-right: auto;
+    height: 1px;
+    width: 1px;
+    background-color: var(--color-text);
+    opacity: 0;
+    transition: opacity .1s, width .5s;
+}
+
+.link:hover {
+    transform: translateX(5px);
+    .underline {
+        opacity: 1;
+        width: 100%;
+    }
+}
