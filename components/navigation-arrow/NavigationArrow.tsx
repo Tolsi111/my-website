@@ -1,11 +1,7 @@
 import React from "react";
 import styles from "./NavigationArrow.module.scss";
 
-interface NavigationArrowProps {
-  color: string;
-}
-
-export default function NavigationArrow(Props: NavigationArrowProps) {
+export default function NavigationArrow() {
   return (
     <svg
       viewBox="0 0 24 24"

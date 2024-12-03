@@ -105,9 +105,6 @@
 }
 
 // SLIDERS
-
-
-
 .contacts .slider {// contact
   width: 100%;
   position: absolute;
@@ -282,7 +279,8 @@
 .experience:hover,
 .projects:hover,
 .about:hover,
-.education:hover {
+.education:hover,
+.theme:hover {
     .navarrow {
       translate: 1px 8px;
     }
@@ -304,6 +302,10 @@
     .navarrow:hover::before {
       animation: spin 1s linear infinite;
     }
+}
+
+.theme .navarrow {
+  cursor: pointer;
 }
 
 @keyframes spin {

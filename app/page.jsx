@@ -32,11 +32,11 @@ import moon from "@/assets/moon.svg";
 import sun from "@/assets/sun.svg";
 import math from "@/assets/math.svg";
 import graduation from "@/assets/graduation.svg";
-import navarrow from "@/assets/navarrow.svg"
 import AnimatedSlider from "@/components/animated-slider/AnimatedSlider";
 import Link from "next/link";
 import NavigationArrow from "@/components/navigation-arrow/NavigationArrow";
 import ExternalLinkButton from "@/components/external-link-button/ExternalLinkButton";
+import ChangeThemeButton from "@/components/change-theme-button/ChangeThemeButton";
 
 export default function Home() {
   // contact
@@ -61,7 +61,7 @@ export default function Home() {
     <article className={`${styles.title}`}>
       <h1>Full-stack Web Developer</h1>
       <h2>With a Front-end focus</h2>
-      <h3>Also, React is my favourite</h3>
+      <h3>A well-rounded individual</h3>
     </article>
     <article className={`${styles.experience}`}>
       <h3 className={styles.navigation}>Work experience</h3>
@@ -124,7 +124,8 @@ export default function Home() {
       </div>
     </article>
     <article className={`${styles.theme}`}>
-      <h3>Change theme</h3>
+      <h3>Change to a random theme</h3>
+      <div className={styles.navarrow}><ChangeThemeButton/></div>
       <div className={styles.slider}>
         <AnimatedSlider vectorGraphics={sliderImagesTheme} reverseAnimation={true}/>
       </div>
