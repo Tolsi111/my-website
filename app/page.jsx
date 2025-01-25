@@ -61,7 +61,7 @@ export default function Home() {
     <article className={`${styles.title}`}>
       <h1>Full-stack Web Developer</h1>
       <h2>With a Front-end focus</h2>
-      <h3>A well-rounded individual</h3>
+      <h3>A well rounded professional</h3>
     </article>
     <article className={`${styles.experience}`}>
       <h3 className={styles.navigation}>Work experience</h3>
