@@ -10,27 +10,28 @@
   --color-text-secondary: #80ed99;
   --color-text: #45dfb1;
 
-
   --color-navy-light: #393053;
-  --color-purple-dark: #443C68;
-  --color-purple-light: #443C68;
+  --color-purple-dark: #443c68;
+  --color-purple-light: #443c68;
   // light mode? color scheme:
-  --color-light-purple: #4F1787;
-  --color-light-pink: #EB3678;
-  --color-light-orange: #FB773C;
+  --color-light-purple: #4f1787;
+  --color-light-pink: #eb3678;
+  --color-light-orange: #fb773c;
 
   // Animated background
-  --color-outer-circle: #836FFF;
-  --color-inner-circle: #15F5BA;
+  --color-outer-circle: #836fff;
+  --color-inner-circle: #15f5ba;
   // Main cards
-  --color-mint: #45FFCA;
+  --color-mint: #45ffca;
   --color-main: #211951;
   // Sizing
   --spacing-big: 40px;
+  --spacing-medium: 30px;
   --spacing-small: 20px;
   --spacing-xsmall: 10px;
   --spacing-xxsmall: 5px;
   --border-radius-regular: 7px;
+  --gap-regular: 25px;
   // Z-index
   --z-index-background: -10;
 }
@@ -41,7 +42,8 @@
 }
 
 * {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
   font-weight: 400;
   box-sizing: border-box;
   padding: 0;
@@ -58,4 +60,8 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
