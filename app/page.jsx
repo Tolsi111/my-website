@@ -46,7 +46,13 @@ export default function Home() {
   const hobbiesSliderImagesSecond = [gamepad, painting, puzzle1, soccer];
   // experience
   const experienceSliderImagesfirst = [slack, jira, git];
-  const experienceSliderImagesSecond = [angular, databases, java, react, spring];
+  const experienceSliderImagesSecond = [
+    angular,
+    databases,
+    java,
+    react,
+    spring,
+  ];
   // projects
   const sliderImagesFrameworks = [angular, react, spring, nextjs];
   const sliderImagesLanguages = [html, javascript, css, typescript];
@@ -57,79 +63,131 @@ export default function Home() {
   const sliderImagesEducation = [math, graduation, coding];
 
   return (
-  <main className={styles['main-container']}>
-    <article className={`${styles.title}`}>
-      <h1>Full-stack Web Developer</h1>
-      <h2>With a Front-end focus</h2>
-      <h3>A well rounded professional</h3>
-    </article>
-    <article className={`${styles.experience}`}>
-      <h3 className={styles.navigation}>Work experience</h3>
-      <Link href={"/experience"} className={styles.navarrow}><NavigationArrow/></Link>
-      <div className={styles.slider}>
-        <AnimatedSlider vectorGraphics={experienceSliderImagesfirst}/>
-      </div>
-      <div className={styles.slider2}>
-        <AnimatedSlider vectorGraphics={experienceSliderImagesSecond} reverseAnimation={true}/>
-      </div>
-    </article>
-    <article className={`${styles.contacts}`}>
-      <h3>Contacts</h3>
-      <ul>
-        <li><ExternalLinkButton targetUrl="https://www.linkedin.com/in/romulus-andrei-bacila-662b1b196/" linkText="Linkedin"/></li>
-        <li><ExternalLinkButton targetUrl="https://github.com/Tolsi111" linkText="Github"/></li>
-        <li><ExternalLinkButton targetUrl="https://tolsi111.github.io/CSS-My-website/Romulus-Andrei%20Bacila%20CV%20Final.pdf" linkText="My CV"/></li>
-      </ul>
-      <div className={styles.slider}>
-        <AnimatedSlider vectorGraphics={contactSliderImages} reverseAnimation={true}/>
-      </div>
-      <div className={styles.slider2}>
-        <AnimatedSlider vectorGraphics={contactSliderImages}/>
-      </div>
-    </article>
-    <article className={`${styles.me}`}>
-      <h1>Romulus-Andrei Bacila</h1>
-      <div className={styles.flex}>
-        <Image src={myself} alt="Picture of me" width={210} height={380} className={styles.picture}/>
-      </div>
-    </article>
-    <article className={`${styles.projects}`}>
-      <h3 className={styles.navigation}>Check out some of my work</h3>
-      <Link href={"/projects"} className={styles.navarrow}><NavigationArrow/></Link>
-      <div className={styles.slider}>
-        <AnimatedSlider vectorGraphics={sliderImagesFrameworks} reverseAnimation={true}/>
-      </div>
-      <div className={styles.slider2}>
-        <AnimatedSlider vectorGraphics={sliderImagesLanguages}/>
-      </div>
-      <div className={styles.slider3}>
-        <AnimatedSlider vectorGraphics={sliderImagesTools} reverseAnimation={true}/>
-      </div>
-    </article>
-    <article className={`${styles.about}`}>
-      <h3 className={styles.navigation}>About me</h3>
-      <Link href={"/about"} className={styles.navarrow}><NavigationArrow/></Link>
-      <div className={styles.slider}>
-        <AnimatedSlider vectorGraphics={hobbiesSliderImagesFirst} reverseAnimation={true}/>
-      </div>
-      <div className={styles.slider2}>
-        <AnimatedSlider vectorGraphics={hobbiesSliderImagesSecond} reverseAnimation={true}/>
-      </div>
-    </article>
-    <article className={`${styles.education}`}>
-      <h3>Education</h3>
-      <Link href={"/education"} className={styles.navarrow}><NavigationArrow/></Link>
-      <div className={styles.slider}>
-        <AnimatedSlider vectorGraphics={sliderImagesEducation}/>
-      </div>
-    </article>
-    <article className={`${styles.theme}`}>
-      <h3>Change to a random theme</h3>
-      <div className={styles.navarrow}><ChangeThemeButton/></div>
-      <div className={styles.slider}>
-        <AnimatedSlider vectorGraphics={sliderImagesTheme} reverseAnimation={true}/>
-      </div>
-    </article>
-  </main>
+    <main className={styles["main-container"]}>
+      <article className={`${styles.title}`}>
+        <h1>Software Engineer</h1>
+        <h2>Frontend developer</h2>
+        <h3>A well rounded professional</h3>
+      </article>
+      <article className={`${styles.experience}`}>
+        <h3 className={styles.navigation}>Work experience</h3>
+        <Link href={"/experience"} className={styles.navarrow}>
+          <NavigationArrow />
+        </Link>
+        <div className={styles.slider}>
+          <AnimatedSlider vectorGraphics={experienceSliderImagesfirst} />
+        </div>
+        <div className={styles.slider2}>
+          <AnimatedSlider
+            vectorGraphics={experienceSliderImagesSecond}
+            reverseAnimation={true}
+          />
+        </div>
+      </article>
+      <article className={`${styles.contacts}`}>
+        <h3>Contacts</h3>
+        <ul>
+          <li>
+            <ExternalLinkButton
+              targetUrl="https://www.linkedin.com/in/romulus-andrei-bacila-662b1b196/"
+              linkText="Linkedin"
+            />
+          </li>
+          <li>
+            <ExternalLinkButton
+              targetUrl="https://github.com/Tolsi111"
+              linkText="Github"
+            />
+          </li>
+          <li>
+            <ExternalLinkButton
+              targetUrl="https://tolsi111.github.io/CSS-My-website/Romulus-Andrei%20Bacila%20CV%20Final.pdf"
+              linkText="My CV"
+            />
+          </li>
+        </ul>
+        <div className={styles.slider}>
+          <AnimatedSlider
+            vectorGraphics={contactSliderImages}
+            reverseAnimation={true}
+          />
+        </div>
+        <div className={styles.slider2}>
+          <AnimatedSlider vectorGraphics={contactSliderImages} />
+        </div>
+      </article>
+      <article className={`${styles.me}`}>
+        <h1>Romulus-Andrei Bacila</h1>
+        <div className={styles.flex}>
+          <Image
+            src={myself}
+            alt="Picture of me"
+            width={210}
+            height={380}
+            className={styles.picture}
+          />
+        </div>
+      </article>
+      <article className={`${styles.projects}`}>
+        <h3 className={styles.navigation}>Check out some of my work</h3>
+        <Link href={"/projects"} className={styles.navarrow}>
+          <NavigationArrow />
+        </Link>
+        <div className={styles.slider}>
+          <AnimatedSlider
+            vectorGraphics={sliderImagesFrameworks}
+            reverseAnimation={true}
+          />
+        </div>
+        <div className={styles.slider2}>
+          <AnimatedSlider vectorGraphics={sliderImagesLanguages} />
+        </div>
+        <div className={styles.slider3}>
+          <AnimatedSlider
+            vectorGraphics={sliderImagesTools}
+            reverseAnimation={true}
+          />
+        </div>
+      </article>
+      <article className={`${styles.about}`}>
+        <h3 className={styles.navigation}>About me</h3>
+        <Link href={"/about"} className={styles.navarrow}>
+          <NavigationArrow />
+        </Link>
+        <div className={styles.slider}>
+          <AnimatedSlider
+            vectorGraphics={hobbiesSliderImagesFirst}
+            reverseAnimation={true}
+          />
+        </div>
+        <div className={styles.slider2}>
+          <AnimatedSlider
+            vectorGraphics={hobbiesSliderImagesSecond}
+            reverseAnimation={true}
+          />
+        </div>
+      </article>
+      <article className={`${styles.education}`}>
+        <h3>Education</h3>
+        <Link href={"/education"} className={styles.navarrow}>
+          <NavigationArrow />
+        </Link>
+        <div className={styles.slider}>
+          <AnimatedSlider vectorGraphics={sliderImagesEducation} />
+        </div>
+      </article>
+      <article className={`${styles.theme}`}>
+        <h3>Change to a random theme</h3>
+        <div className={styles.navarrow}>
+          <ChangeThemeButton />
+        </div>
+        <div className={styles.slider}>
+          <AnimatedSlider
+            vectorGraphics={sliderImagesTheme}
+            reverseAnimation={true}
+          />
+        </div>
+      </article>
+    </main>
   );
 }
