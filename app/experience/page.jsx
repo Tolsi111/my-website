@@ -12,8 +12,19 @@ export default function Experience() {
 
   const [position, setPosition] = useState(0);
   const [dragging, setDragging] = useState(false);
+  const [showFirstTitle, setShowFirstTitle] = useState(true);
 
   const ITEM_SIZE = 30;
+
+  const adjustPosition = (y) => {
+    console.log("Y:", y);
+    if (y < 200) {
+      setShowFirstTitle(true);
+    } else {
+      setShowFirstTitle(false);
+    }
+    setPosition(y);
+  };
 
   const startDrag = (e) => {
     if (!lineRef.current) return;
@@ -34,12 +45,12 @@ export default function Experience() {
       let y = e.clientY - rect.top - dragOffset.current;
       y = Math.max(0, Math.min(y, rect.height - ITEM_SIZE));
 
-      console.log(
-        "Position:",
-        Math.round((y / (rect.height - ITEM_SIZE)) * 100),
-        "%",
-      );
-      setPosition(y);
+      // console.log(
+      //   "Position:",
+      //   Math.round((y / (rect.height - ITEM_SIZE)) * 100),
+      //   "%",
+      // );
+      adjustPosition(y);
     };
 
     const handleUp = () => {
@@ -78,7 +89,34 @@ export default function Experience() {
         </div>
       </section>
       <section className={styles["job-title"]}>
-        <h3>Job Title</h3>
+        {showFirstTitle && (
+          <div className={styles["first-title"]}>
+            <h2>
+              <span>Software Engineer</span> <span>@BMW Techworks</span>
+            </h2>
+            <h3>
+              <span>Frontend Developer</span>
+              <span> / Full-Stack Developer</span>
+            </h3>
+            <h4>
+              <span>Lead</span> <span> Developer </span>
+            </h4>
+          </div>
+        )}
+        {!showFirstTitle && (
+          <div className={styles["second-title"]}>
+            <h2>
+              <span>Full Stack Developer</span> <span>@Rodeapps</span>
+            </h2>
+            <h3>
+              <span>Spring Boot,</span>
+              <span> Angular & React</span>
+            </h3>
+            <h4>
+              <span>Mostly</span> <span> Angular </span>
+            </h4>
+          </div>
+        )}
       </section>
       <section className={styles["highlights"]}>
         <h3>Highlights</h3>
