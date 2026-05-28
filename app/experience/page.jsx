@@ -1,13 +1,17 @@
 import styles from "./experience-page.module.scss";
+import navArrowStyles from "@/assets/styles/navarrow.module.scss";
+import layoutStyles from "@/assets/styles/layouts.module.scss";
 import Link from "next/link";
 import NavigationArrow from "@/components/navigation-arrow/NavigationArrow";
 
 export default function Experience() {
   return (
-    <main className={styles["main-container"]}>
-      <section className={styles["back-home"]}>
+    <main className={layoutStyles["bento-layout"]}>
+      <section
+        className={`${navArrowStyles["navarrow-container"]} ${styles["back-home"]}`}
+      >
         <h3>Back to home page</h3>
-        <Link href={"../"} className={styles.navarrow}>
+        <Link href={"../"} className={navArrowStyles["navarrow"]}>
           <NavigationArrow />
         </Link>
       </section>

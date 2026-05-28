@@ -1,37 +1,39 @@
 import Image from "next/image";
 import styles from "./page.module.scss";
+import navArrowStyles from "@/assets/styles/navarrow.module.scss";
+import layoutStyles from "@/assets/styles/layouts.module.scss";
 import myself from "@/assets/me.webp";
-import email from "@/assets/email.svg";
-import github from "@/assets/github.svg";
-import linkedin from "@/assets/linkedin.svg";
-import phone from "@/assets/phone.svg";
-import puzzle2 from "@/assets/puzzle2.svg";
-import coding from "@/assets/coding.svg";
-import chess from "@/assets/chess.svg";
-import gamepad from "@/assets/gamepad.svg";
-import painting from "@/assets/painting.svg";
-import puzzle1 from "@/assets/puzzle1.svg";
-import soccer from "@/assets/soccer.svg";
-import slack from "@/assets/slack.svg";
-import jira from "@/assets/jira.svg";
-import git from "@/assets/git.svg";
-import angular from "@/assets/angular.svg";
-import databases from "@/assets/databases.svg";
-import java from "@/assets/java.svg";
-import react from "@/assets/react.svg";
-import spring from "@/assets/spring.svg";
-import debug from "@/assets/debug.svg";
-import css from "@/assets/css.svg";
-import firebase from "@/assets/firebase.svg";
-import postman from "@/assets/postman.svg";
-import html from "@/assets/html.svg";
-import javascript from "@/assets/javascript.svg";
-import nextjs from "@/assets/nextjs.svg";
-import typescript from "@/assets/typescript.svg";
-import moon from "@/assets/moon.svg";
-import sun from "@/assets/sun.svg";
-import math from "@/assets/math.svg";
-import graduation from "@/assets/graduation.svg";
+import email from "@/assets/icons/email.svg";
+import github from "@/assets/icons/github.svg";
+import linkedin from "@/assets/icons/linkedin.svg";
+import phone from "@/assets/icons/phone.svg";
+import puzzle2 from "@/assets/icons/puzzle2.svg";
+import coding from "@/assets/icons/coding.svg";
+import chess from "@/assets/icons/chess.svg";
+import gamepad from "@/assets/icons/gamepad.svg";
+import painting from "@/assets/icons/painting.svg";
+import puzzle1 from "@/assets/icons/puzzle1.svg";
+import soccer from "@/assets/icons/soccer.svg";
+import slack from "@/assets/icons/slack.svg";
+import jira from "@/assets/icons/jira.svg";
+import git from "@/assets/icons/git.svg";
+import angular from "@/assets/icons/angular.svg";
+import databases from "@/assets/icons/databases.svg";
+import java from "@/assets/icons/java.svg";
+import react from "@/assets/icons/react.svg";
+import spring from "@/assets/icons/spring.svg";
+import debug from "@/assets/icons/debug.svg";
+import css from "@/assets/icons/css.svg";
+import firebase from "@/assets/icons/firebase.svg";
+import postman from "@/assets/icons/postman.svg";
+import html from "@/assets/icons/html.svg";
+import javascript from "@/assets/icons/javascript.svg";
+import nextjs from "@/assets/icons/nextjs.svg";
+import typescript from "@/assets/icons/typescript.svg";
+import moon from "@/assets/icons/moon.svg";
+import sun from "@/assets/icons/sun.svg";
+import math from "@/assets/icons/math.svg";
+import graduation from "@/assets/icons/graduation.svg";
 import AnimatedSlider from "@/components/animated-slider/AnimatedSlider";
 import Link from "next/link";
 import NavigationArrow from "@/components/navigation-arrow/NavigationArrow";
@@ -63,15 +65,17 @@ export default function Home() {
   const sliderImagesEducation = [math, graduation, coding];
 
   return (
-    <main className={styles["main-container"]}>
+    <main className={layoutStyles["bento-layout"]}>
       <article className={`${styles.title}`}>
         <h1>Software Engineer</h1>
         <h2>Frontend developer</h2>
         <h3>A well rounded professional</h3>
       </article>
-      <article className={`${styles.experience}`}>
+      <article
+        className={`${styles.experience} ${navArrowStyles["navarrow-container"]}`}
+      >
         <h3 className={styles.navigation}>Work experience</h3>
-        <Link href={"/experience"} className={styles.navarrow}>
+        <Link href={"/experience"} className={navArrowStyles.navarrow}>
           <NavigationArrow />
         </Link>
         <div className={styles.slider}>
@@ -128,9 +132,11 @@ export default function Home() {
           />
         </div>
       </article>
-      <article className={`${styles.projects}`}>
+      <article
+        className={`${styles.projects} ${navArrowStyles["navarrow-container"]}`}
+      >
         <h3 className={styles.navigation}>Check out some of my work</h3>
-        <Link href={"/projects"} className={styles.navarrow}>
+        <Link href={"/projects"} className={navArrowStyles.navarrow}>
           <NavigationArrow />
         </Link>
         <div className={styles.slider}>
@@ -149,9 +155,11 @@ export default function Home() {
           />
         </div>
       </article>
-      <article className={`${styles.about}`}>
+      <article
+        className={`${styles.about} ${navArrowStyles["navarrow-container"]}`}
+      >
         <h3 className={styles.navigation}>About me</h3>
-        <Link href={"/about"} className={styles.navarrow}>
+        <Link href={"/about"} className={navArrowStyles.navarrow}>
           <NavigationArrow />
         </Link>
         <div className={styles.slider}>
@@ -167,9 +175,11 @@ export default function Home() {
           />
         </div>
       </article>
-      <article className={`${styles.education}`}>
+      <article
+        className={`${styles.education} ${navArrowStyles["navarrow-container"]}`}
+      >
         <h3>Education</h3>
-        <Link href={"/education"} className={styles.navarrow}>
+        <Link href={"/education"} className={navArrowStyles.navarrow}>
           <NavigationArrow />
         </Link>
         <div className={styles.slider}>
@@ -178,7 +188,7 @@ export default function Home() {
       </article>
       <article className={`${styles.theme}`}>
         <h3>Change to a random theme</h3>
-        <div className={styles.navarrow}>
+        <div className={navArrowStyles["navarrow-container"]}>
           <ChangeThemeButton />
         </div>
         <div className={styles.slider}>

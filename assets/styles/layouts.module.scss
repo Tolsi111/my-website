@@ -1,0 +1,19 @@
+.bento-layout {
+  display: grid;
+  grid-template-rows: repeat(9, 60px);
+  grid-template-columns: repeat(9, 80px);
+  grid-gap: var(--spacing-small);
+}
+
+.bento-layout > * {
+  position: relative;
+  border-radius: var(--border-radius-regular);
+  border-style: solid;
+  overflow: hidden;
+  color: var(--color-text);
+  padding: var(--spacing-small);
+  background-color: var(--color-bg-secondary);
+  transition:
+    transform 0.5s,
+    box-shadow 2s;
+}

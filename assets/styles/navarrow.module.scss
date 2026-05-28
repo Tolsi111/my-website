@@ -1,0 +1,70 @@
+.navarrow {
+  display: flex;
+  position: relative;
+  height: 30px;
+  width: 30px;
+  transition: translate 0.2s;
+  animation: navarrowAnimation 0.3s;
+
+  svg {
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--border-radius-regular);
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.navarrow-container:hover {
+  .navarrow {
+    translate: 1px 8px;
+  }
+  .navarrow::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: var(--border-radius-regular);
+    opacity: 0.8;
+    background-image: conic-gradient(
+      from var(--angle),
+      var(--color-text-secondary),
+      transparent,
+      var(--color-text-secondary),
+      transparent,
+      var(--color-text-secondary)
+    );
+    left: -2px;
+    top: -2px;
+    padding: 2px;
+    z-index: -1;
+    animation: spin 5s linear infinite;
+  }
+
+  .navarrow:hover::before {
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+@keyframes navarrowAnimation {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
