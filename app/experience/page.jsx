@@ -5,6 +5,7 @@ import navArrowStyles from "@/assets/styles/navarrow.module.scss";
 import layoutStyles from "@/assets/styles/layouts.module.scss";
 import Link from "next/link";
 import NavigationArrow from "@/components/navigation-arrow/NavigationArrow";
+import { techStack } from "./tech-stack-map";
 
 export default function Experience() {
   const lineRef = useRef(null);
@@ -13,15 +14,21 @@ export default function Experience() {
   const [position, setPosition] = useState(0);
   const [dragging, setDragging] = useState(false);
   const [showFirstTitle, setShowFirstTitle] = useState(true);
+  const [techStackIndex, setTechStackIndex] = useState(10);
 
   const ITEM_SIZE = 30;
 
-  const adjustPosition = (y) => {
-    console.log("Y:", y);
-    if (y < 200) {
+  const adjustPosition = (y, percentage) => {
+    console.log("Y:", percentage, "%");
+    // Job title switch at 60%
+    if (percentage >= 60) {
       setShowFirstTitle(true);
     } else {
       setShowFirstTitle(false);
+    }
+    // Tech stack switch every 10%
+    if (Math.floor(percentage / 10) !== techStackIndex) {
+      setTechStackIndex(Math.floor(percentage / 10));
     }
     setPosition(y);
   };
@@ -44,13 +51,10 @@ export default function Experience() {
       const rect = lineRef.current.getBoundingClientRect();
       let y = e.clientY - rect.top - dragOffset.current;
       y = Math.max(0, Math.min(y, rect.height - ITEM_SIZE));
-
-      // console.log(
-      //   "Position:",
-      //   Math.round((y / (rect.height - ITEM_SIZE)) * 100),
-      //   "%",
-      // );
-      adjustPosition(y);
+      adjustPosition(
+        y,
+        100 - Math.round((y / (rect.height - ITEM_SIZE)) * 100),
+      );
     };
 
     const handleUp = () => {
@@ -77,7 +81,6 @@ export default function Experience() {
         </Link>
       </section>
       <section className={styles["slider"]}>
-        {/* <h3>Slider</h3> */}
         <div className={styles["drag-line"]} ref={lineRef}>
           <div
             className={styles["drag-item"]}
@@ -123,6 +126,27 @@ export default function Experience() {
       </section>
       <section className={styles["tech-stack"]}>
         <h3>Tech Stack</h3>
+        <div className={styles["tech-stack-container"]}>
+          {techStack[techStackIndex].map((item, index) => (
+            <span
+              key={item.name}
+              className={styles["tech-stack-item"]}
+              style={{
+                borderColor: item.color,
+                color: item.color,
+                ...(item.scale && {
+                  transform: `scale(${item.scale})`,
+                }),
+                ...(item.size && {
+                  width: `${item.size.width}px`,
+                  height: `${item.size.height}px`,
+                }),
+              }}
+            >
+              {item.name}
+            </span>
+          ))}
+        </div>
       </section>
     </main>
   );
