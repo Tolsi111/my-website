@@ -332,7 +332,6 @@ export const techStack: TechStack[][] = [
       scale: 1.05,
       size: { width: 130, height: 65 },
     },
-    // { name: "Angular", color: "#DD0031", size: { width: 100, height: 30 } },
     { name: "RxJs", color: "#B7178C", size: { width: 80, height: 45 } },
     { name: "MomentJS", color: "#FF6C37" },
     { name: "Node.js", color: "#339933" },
